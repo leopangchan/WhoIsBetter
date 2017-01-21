@@ -10,12 +10,45 @@ var visual_recognition = watson.visual_recognition({
 
 var params = {
   //images_file: fs.createReadStream("./ImagesSetOne/ski.jpg")
-  url : "https://scontent.cdninstagram.com/t51.2885-15/e35/15803173_946389682159210_1041105355360174080_n.jpg"
+  url : ""
 };
+// read the txt file line by line
+function readLines(input, func) {
+  var remaining = '';
 
-visual_recognition.classify(params, function(err, res) {
-  if (err)
-    console.log(err);
-  else
-    console.log(JSON.stringify(res, null, 2));
-});
+  input.on('data', function(data) {
+    remaining += data;
+    var index = remaining.indexOf('\n');
+    while (index > -1) {
+      var line = remaining.substring(0, index);
+      remaining = remaining.substring(index + 1);
+      func(line);
+      index = remaining.indexOf('\n');
+    }
+  });
+
+  input.on('end', function() {
+    if (remaining.length > 0) {
+      func(remaining);
+    }
+  });
+}
+
+function func(data) {
+  console.log('Line: ' + data);
+  params.url = data;
+  visual_recognition.classify(params, function(err, res) {
+    if (err)
+      console.log(err);
+    else
+      console.log(JSON.stringify(res, null, 2));
+  });
+
+}
+
+var input = fs.createReadStream('./ImagesSetOne/ImagesetOne.txt');
+readLines(input, func);
+//
+
+//
+//
