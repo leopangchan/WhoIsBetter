@@ -25,5 +25,5 @@ def getUrlsFromInsta(personsUserName, pathName):
             else:
                 break
 
-getUrlsFromInsta('leopangchan', '/Users/khoanguyen1/Desktop/CPE/Side Projects/whoIsBetter/WhoIsBetter/IBM Watson/ImagesSetOne/ImagesetOne.txt')
+# getUrlsFromInsta('leopangchan', '/Users/khoanguyen1/Desktop/CPE/Side Projects/whoIsBetter/WhoIsBetter/IBM Watson/ImagesSetOne/ImagesetOne.txt')
 

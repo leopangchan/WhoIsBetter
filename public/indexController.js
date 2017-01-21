@@ -1,7 +1,7 @@
 app.controller("indexController", ["$scope", "$http", "$state",
   function(scope, http, state){
 
-    scope.chatBoxMessages = ["Queen: Hello! I'm Meta. ",
+    scope.chatBoxMessages = ["Queen: Hello! I'm the Queen. ",
                             "Queen: query: insta <instagram account one> <instagram account two>",
                             "Queen: Please type \"Help\" to see what personality you can compare by."
                     ];
