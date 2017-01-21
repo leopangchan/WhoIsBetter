@@ -11,7 +11,7 @@ def trade_spider(personsUserName, pathName):
     for link in soup.findAll('script', {'type': 'text/javascript'}):
         # href = link.get()
         while (1):
-            href = re.search('display_src\"\:\ \"(.+?)\"', str(link))
+            href = re.search('display_src\"\:\ \"(.+?)\?ig', str(link))
 
             if href:
                 found = href.group(1)
