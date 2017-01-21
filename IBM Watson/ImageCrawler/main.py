@@ -33,4 +33,4 @@ def main(argv1, argv2):
     getUrlsFromInsta(argv1, argv2)
 
 if __name__ == "__main__":
-    main('danhkhoanguyen', "./khoa")
+    main(sys.argv[1], sys.argv[2])
