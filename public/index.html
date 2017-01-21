@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Who is better</title>
+      <title>Who is the Queen</title>
   </head>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
@@ -18,25 +18,13 @@
          <div class="row">
      		<div class="col-md-3">
            	 <div class="row chats-row">
-                   <div class="col-md-12">
-                       <a href="#" class="list-group-item open-request">
-                          <h2>Enter your instagram's account</h2>
-                          <input type="text" class="form-control">
-                          <button class="btn btn-default">Accept</button>
-                       </a>
-           	       </div>
-                   <div class="col-md-12">
-                       <a href="#" class="list-group-item open-request">
-                          <h2>Enter your friend's account</h2>
-                          <input type="text" class="form-control">
-                          <button class="btn btn-default">Accept</button>
-                       </a>
-           	       </div>
+                  <h2>Welcome to WhoIsTheQueen</h2>
            	 </div>
      		</div>
         <div class="col-md-9 current-chat">
+             <h2>Chating with the Queen:</h2>
              <div class="row current-chat-area">
-                <para class="col-md-10 alert alert-info message-para" ng-repeat="message in chatBoxMessages" ng-style="messageStyler(message)">{{message}}</para>
+                <para class="col-md-10 alert alert-info message-para" ng-repeat="message in chatBoxMessages track by $index" ng-style="messageStyler(message)">{{message}}</para>
              </div>
              <div class="row current-chat-footer">
                 <div class="panel-footer">
