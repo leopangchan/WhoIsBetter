@@ -9,7 +9,8 @@ var visual_recognition = watson.visual_recognition({
 });
 
 var params = {
-  images_file: fs.createReadStream("./ImagesSetOne/ski.jpg")
+  //images_file: fs.createReadStream("./ImagesSetOne/ski.jpg")
+  url : "https://scontent.cdninstagram.com/t51.2885-15/e35/15803173_946389682159210_1041105355360174080_n.jpg"
 };
 
 visual_recognition.classify(params, function(err, res) {
