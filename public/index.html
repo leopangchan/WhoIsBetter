@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Who is better</title>
+  </head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./index.css">
+
+  <script src="mainModule.js"></script>
+  <script src="indexController.js"></script>
+
+   <body ng-app = "mainApp" ng-controller = "indexController">
+     <div class="container" style="width:95%; background-color:#f7f7f7;">
+         <div class="row">
+     		<div class="col-md-3">
+             	 <div class="row chats-row">
+                     <div class="col-md-12">
+                         <a href="#" class="list-group-item open-request">
+                            <p>Enter your instagram's account</p>
+                            <input type="text" class="form-control">
+                            <button class="btn btn-default">Accept</button>
+                         </a>
+             	       </div>
+                     <div class="col-md-12">
+                         <a href="#" class="list-group-item open-request">
+                            <h2>Enter your friend's account</h2>
+                            <input type="text" class="form-control">
+                            <button class="btn btn-default">Accept</button>
+                         </a>
+             	       </div>
+             	 </div>
+     		</div>
+             <div class="col-md-9 current-chat">
+                 <div class="row current-chat-area">
+                     <div class="col-md-12">
+                           <ul class="media-list">
+                             <li class="media">
+                                 <div class="media-body">
+                                     <div class="media">
+
+                                     </div>
+                                 </div>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="row current-chat-footer">
+                 <div class="panel-footer">
+                     <div class="input-group">
+                       <input type="text" class="form-control">
+                       <span class="input-group-btn">
+                         <button class="btn btn-default" type="button">Send</button>
+                       </span>
+                     </div>
+                     </div>
+                 </div>
+     		</div>
+     	</div>
+     </div>
+  </body>
+</html>

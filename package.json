@@ -1,0 +1,19 @@
+{
+  "name": "whobetter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leopangchan/WhosDatPerson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leopangchan/WhosDatPerson/issues"
+  },
+  "homepage": "https://github.com/leopangchan/WhosDatPerson#readme"
+}
