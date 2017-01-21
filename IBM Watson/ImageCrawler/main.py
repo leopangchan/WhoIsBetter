@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+import sys
 import requests
 import re
 from bs4 import BeautifulSoup
@@ -25,5 +28,9 @@ def getUrlsFromInsta(personsUserName, pathName):
             else:
                 break
 
-getUrlsFromInsta('leopangchan', '/Users/khoanguyen1/Desktop/CPE/Side Projects/whoIsBetter/WhoIsBetter/IBM Watson/ImagesSetOne/ImagesetOne.txt')
+def main(argv1, argv2):
+    print(argv1)
+    getUrlsFromInsta(argv1, argv2)
 
+if __name__ == "__main__":
+    main('danhkhoanguyen', "./khoa")
