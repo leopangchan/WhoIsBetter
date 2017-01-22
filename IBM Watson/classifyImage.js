@@ -69,7 +69,7 @@ function func(data, map) {
 
 async.series([
   function(callback){
-    var input1 = fs.createReadStream('./ImagesSetOne/ImagesetOne.txt');
+    var input1 = fs.createReadStream('../PythonRouter/ImageSetOne');
     readLines(input1, map1, func);
     callback(null);
   },
@@ -92,7 +92,7 @@ async.series([
     callback(null);
   },
   function(callback){
-    var input2 = fs.createReadStream('./ImagesSetTwo/ImagesetTwo.txt');
+    var input2 = fs.createReadStream('../PythonRouter/ImageSetTwo');
     readLines(input2, map2, func);
     callback(null);
   },
