@@ -1,0 +1,155 @@
+The App is listening from port: 3000
+PRINTING HashMap
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15802634_603366759851322_7206504769597210624_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15876076_866632623477898_6272465132085837824_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15876640_440351126356034_1337730421185576960_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15876024_1405360176143372_5452273592848875520_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p750x750/15623951_1773863182939006_2199926117807161344_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15624095_241633016266804_2735339219122651136_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p750x750/15624286_112061172626857_1814791564241666048_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15306053_357463321296989_4805676789105950720_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15099589_840927949382525_2943955126538207232_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15056572_609010012619008_3555106291036717056_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15046897_210609239385735_6677687711551193088_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/15035041_1261210880601648_8065977749010907136_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/16123234_1834218090182638_3340065069596672000_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15803173_946389682159210_1041105355360174080_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15876778_1342018815856696_6520440317370433536_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e35/15803147_1205917372856614_4900307876553162752_n.jpg
+Line: https://scontent.cdninstagram.com/t51.2885-15/e15/927170_298879260303495_1394123597_n.jpg
+"wet suit" 0.863
+"garment" 0.863
+"icecap" 0.554
+"ice mass" 0.574
+"nature" 0.574
+"azure color" 1
+"lecture room" 0.674
+"room" 0.823
+"check-in" 0.604
+"exhibition hall" 0.554
+"hall" 0.68
+"olive green color" 0.86
+"ultramarine color" 0.64
+"cowboy hat" 0.604
+"hat" 0.604
+"headdress" 0.604
+"man with shaven head" 0.602
+"person" 0.668
+"plunger" 0.571
+"tool" 0.571
+"noisemaker" 0.554
+"device" 0.554
+"maroon color" 0.806
+"claret red color" 0.681
+"wet suit" 0.769
+"garment" 0.769
+"diving suit" 0.645
+"seaside" 0.554
+"seashore" 0.558
+"shore" 0.565
+"nature" 0.566
+"azure color" 1
+"ridge" 0.76
+"nature" 0.846
+"ski slope" 0.554
+"slope" 0.656
+"azure color" 0.984
+"dinner table" 0.764
+"dining table" 0.768
+"table" 0.815
+"furniture" 0.815
+"banquet" 0.57
+"meal" 0.586
+"nutrition" 0.588
+"food" 0.589
+"canteen" 0.566
+"room" 0.566
+"breakfast table" 0.554
+"pale yellow color" 0.98
+"man and child" 0.605
+"person" 0.836
+"sweetheart" 0.577
+"caring pair" 0.554
+"people" 0.554
+"pink color" 0.762
+"mustachio" 0.8
+"soul patch facial hair" 0.686
+"monocle" 0.554
+"optical device" 0.554
+"device" 0.554
+"orange color" 0.687
+"Indian red color" 0.512
+"mustachio" 0.77
+"whiteface (clown)" 0.554
+"entertainer" 0.554
+"person" 0.554
+"maroon color" 0.867
+"reddish brown color" 0.803
+"hair curler" 0.742
+"device" 0.742
+"pompadour hairstyle" 0.59
+"toupee (hairpiece)" 0.554
+"hairpiece (hair)" 0.598
+"dress" 0.598
+"alizarine red color" 0.955
+"people" 0.554
+"person" 0.561
+"reddish brown color" 0.866
+"coal black color" 0.717
+"snowboard" 0.914
+"snowshoe" 0.674
+"device" 0.674
+"azure color" 0.894
+"ultramarine color" 0.549
+"ramp" 0.572
+"inclined plane" 0.572
+"machine" 0.572
+"device" 0.62
+"rollerblading" 0.57
+"skating" 0.612
+"sport" 0.612
+"skateboard" 0.567
+"vehicle" 0.567
+"rearview mirror" 0.562
+"mirror" 0.562
+"reflector" 0.562
+"snowbank" 0.56
+"mound" 0.561
+"skateboarding" 0.554
+"indigo color" 0.826
+"coal black color" 0.632
+"beard" 0.806
+"person" 0.806
+"eyepatch" 0.712
+"mask" 0.554
+"Indian red color" 0.745
+"gray color" 0.679
+"web site" 0.826
+"computer" 0.92
+"machine" 0.92
+"device" 0.95
+"chat room" 0.739
+"window" 0.604
+"video display" 0.617
+"electronic device" 0.617
+"menu" 0.554
+"food" 0.554
+"blue color" 0.533
+"dogsled" 0.815
+"sled" 0.876
+"vehicle" 0.93
+"snowmobile" 0.682
+"tracked vehicle" 0.682
+"musher (person) with dog sled " 0.554
+"traveler" 0.554
+"person" 0.554
+"azure color" 1
+"assembly hall" 0.611
+"schoolmate" 0.576
+"person" 0.576
+"newsroom" 0.565
+"office" 0.566
+"call center" 0.554
+"building" 0.554
+"greenishness color" 0.753
+"pink color" 0.53

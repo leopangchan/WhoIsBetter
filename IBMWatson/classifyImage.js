@@ -32,9 +32,7 @@ function readLines(input, map, func) {
     while (index > -1) {
       var line = remaining.substring(0, index);
       remaining = remaining.substring(index + 1);
-	  console.log("LINE: " + line);
       func(line, map);
-
       index = remaining.indexOf('\n');
     }
   });
@@ -53,8 +51,6 @@ function func(data, map) {
     if (err)
       console.log(err);
     else{
-      // var test = JSON.stringify(res, null, 2);
-      console.log("Check this bug" + JSON.stringify(res));
       var obj = res.images[0].classifiers[0].classes;
       var value = 1;
       for(var i = 0; i < obj.length; i++) {
@@ -62,9 +58,8 @@ function func(data, map) {
         var value = JSON.stringify(obj[i].score, null, 2);
         if(map.get(key) >= 0)
           value = parseInt(value) + parseInt(map.get(key));
-        console.log(key + " " + value);
-        // map.get(key);
-        map.set(key, value);
+        map.set(map.hash(key), value);
+        console.log(key + " " + map.get(map.hash(key)));
       }
     }
   });
@@ -73,7 +68,7 @@ function func(data, map) {
 function mainFunc(){
   async.series([
     function(callback){
-      var input1 = fs.createReadStream('C:/Users/yiupang/Documents/GitHub/SBHACKS/WhoIsBetter/PythonRouter/ImageSetOne');
+      var input1 = fs.createReadStream('../PythonRouter/ImageSetOne');
       readLines(input1, map1, func);
       callback(null);
     },
@@ -85,7 +80,7 @@ function mainFunc(){
       callback(null);
     },
     function(callback){
-      var input2 = fs.createReadStream('C:/Users/yiupang/Documents/GitHub/SBHACKS/WhoIsBetter/PythonRouter/ImageSetTwo');
+      var input2 = fs.createReadStream('../PythonRouter/ImageSetTwo');
       readLines(input2, map2, func);
       callback(null);
     },
@@ -96,7 +91,7 @@ function mainFunc(){
         console.error(err);
       });
       callback(null);
-	  console.log("PRINTING HashMap");
+	    console.log("PRINTING HashMap" + "map1: " + map1.count());
       map1.forEach(function(value, key) {
          console.log(key + " : " + value);
       });
@@ -107,22 +102,10 @@ function mainFunc(){
     }
   ]);
 }
-
+mainFunc();
 router.get("/", function(req, res){
-  var map = mainFunc();
-  res.send(map);
+  var maps = mainFunc();
+  res.send(maps);
 });
 
 module.exports = router;
-// map1.forEach(function(value, key) {
-//     console.log(key + " : " + value);
-// });
-// var json2 = JSON.stringify(map2);
-// var file2 = './ImagesSetTwo/data2.json'
-// jsonfile.writeFile(file2, json2)
-
-
-//
-
-//
-//

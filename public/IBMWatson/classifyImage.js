@@ -78,7 +78,6 @@ function mainFunc(){
       callback(null);
     },
     function(callback){
-      console.log("MEEEEEEEEEE");
       // readLines(input1, map1, func);
       var file1 = './data1.json'
       // var json1 = [], item;
@@ -116,6 +115,15 @@ function mainFunc(){
         console.error(err);
       });
       callback(null);
+
+      console.log("MAP1 \n");
+      map1.forEach(function(value, key) {
+        console.log(key + " : " + value);
+      });
+      console.log("MAP2 \n");
+      map2.forEach(function(value, key) {
+        console.log(key + " : " + value);
+      });
       return [map1,map2];
     }
   ]);
