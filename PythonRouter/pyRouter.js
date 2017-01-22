@@ -11,7 +11,6 @@ var execPythonScript = function(account, fileDir)
       throw err;
     process.stderr.write(err);
     process.stdout.write(out);
-    process.exit(code);
   });
 }
 

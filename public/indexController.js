@@ -51,7 +51,7 @@ app.controller("indexController", ["$scope", "$http", "$state",
           scope.currentCompetitorInstagram = parsedQuery[2];
           scope.acceptImages(parsedQuery[1], "./PythonRouter/ImageSetOne");
           scope.acceptImages(parsedQuery[2], "./PythonRouter/ImageSetTwo");
-          sleep(2000);
+          //sleep(2000);
         }
         text += "Image processing completed! You can start to compare you and your competitor.";
       }
