@@ -16,6 +16,12 @@ app.controller("indexController", ["$scope", "$http", "$state",
       scope.chatBoxMessages.push(decisionTree(input));
     }
 
+    var runPythonScript = function(account, fileDir)
+    {
+      console.log("runPythonScript is being called in indexController.js\n" + account + " " + fileDir);
+      http.get("/py?account=" + account + "&fileDir=" + fileDir);
+    }
+
     /*Goal: A function that gerenerate responeses based on the input
       Called by: botRespond()*/
     var decisionTree = function(input)
@@ -43,7 +49,9 @@ app.controller("indexController", ["$scope", "$http", "$state",
         else {
           scope.currentUserInstagram = parsedQuery[1];
           scope.currentCompetitorInstagram = parsedQuery[2];
-          scope.acceptImages(parsedQuery[1], parsedQuery[2]);
+          scope.acceptImages(parsedQuery[1], "./PythonRouter/ImageSetOne");
+          scope.acceptImages(parsedQuery[2], "./PythonRouter/ImageSetTwo");
+          sleep(2000);
         }
         text += "Image processing completed! You can start to compare you and your competitor.";
       }
@@ -78,16 +86,18 @@ app.controller("indexController", ["$scope", "$http", "$state",
     }
 
     /*Goal: it calls Khoa's python script that calls Zin's javascript that return classes that I can use.*/
-    scope.acceptImages = function(setOneURL, setTwoURL)
+    scope.acceptImages = function(setOneURL, fileDir)
     {
-      if(scope.currentUserInstagram !== null && scope.currentCompetitorInstagram !== null)
+      if(scope.currentUserInstagram !== null)
       {
-        scope.getImages(scope.currentUserInstagram, setOneURL);
-        scope.getImages(scope.currentCompetitorInstagram, setTwoURL);
+        scope.getImages(setOneURL, fileDir);
         scope.chatBoxMessages.push("Queen: I'm fetching images. Please wait!!");
+        runPythonScript(setOneURL, fileDir);
         //TODO: Create loops for fetching
         //TODO: Classes Analysis
+        return true;
       }
+      return false;
     }
 
     scope.getImages = function(instagramAccount, savingPath)
