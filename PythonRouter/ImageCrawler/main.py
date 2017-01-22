@@ -17,7 +17,7 @@ def getURL(personsUserName, pathName):
 
             if href:
                 found = href.group(1)
-                print(found)
+                # print(found)
                 f.write(found + '\n')
                 newlink = re.search('display_src\"\:\ \"(.+$)', str(link))
                 if newlink:
@@ -28,7 +28,7 @@ def getURL(personsUserName, pathName):
                 break
 
 def main(argv1, argv2):
-    print( "I'm proessing "+ argv1 + "to dir" + argv2 + "in python")
+    # print( "I'm proessing "+ argv1 + " to dir " + argv2 + "in python")
     getURL(argv1, argv2)
 
 if __name__ == "__main__":

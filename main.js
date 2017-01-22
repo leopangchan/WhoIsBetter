@@ -6,9 +6,11 @@ var router = express.Router({caseSensitive: true});
 // Server static files, such as html and css.
 app.use(express.static(path.join(__dirname , "/public")));
 var pyInterface = require("./PythonRouter/pyRouter.js");
-
+var watsonInterface = require("./IBMWatson/classifyImage.js");
 var port = Number(process.env.PORT || 3000);
+
 app.use("/py", pyInterface);
+app.use("/watson", watsonInterface);
 
 var server = app.listen(port, function(){
   var port = server.address().port;

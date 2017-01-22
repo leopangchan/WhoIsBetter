@@ -42,6 +42,8 @@ app.controller("indexController", ["$scope", "$http", "$state",
       }
       else if(input.substring(0, 5) === "insta")//Query condition
       {
+        var hashMapOne = null;
+        var hashMapTwo = null;
         parsedQuery = input.split(" ");
 
         if(parsedQuery[1] === null || parsedQuery[2] === null)
@@ -51,7 +53,14 @@ app.controller("indexController", ["$scope", "$http", "$state",
           scope.currentCompetitorInstagram = parsedQuery[2];
           scope.acceptImages(parsedQuery[1], "./PythonRouter/ImageSetOne");
           scope.acceptImages(parsedQuery[2], "./PythonRouter/ImageSetTwo");
-          //sleep(2000);
+
+          http.get("/watson")
+          .then(function(res){
+            console.log("Insde IBM HTTP");
+            console.log(JSON.stringify(res));
+            hashMapOne = res.data[0];
+            hashMapTwo = res.data[1];
+          });
         }
         text += "Image processing completed! You can start to compare you and your competitor.";
       }
