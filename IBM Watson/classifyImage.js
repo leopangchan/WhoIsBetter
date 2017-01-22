@@ -66,54 +66,56 @@ function func(data, map) {
 }
 
 
-
-async.series([
-  function(callback){
-    var input1 = fs.createReadStream('../PythonRouter/ImageSetOne');
-    readLines(input1, map1, func);
-    callback(null);
-  },
-  function(callback){
-    console.log("MEEEEEEEEEE");
-    // readLines(input1, map1, func);
-    var file1 = './ImagesSetOne/data1.json'
-    // var json1 = [], item;
-    // for (var type in map1) {
-    //     if (map1.hasOwnProperty(type)) {
-    //         item = {};
-    //         item.type = type;
-    //         item.name = map1[type];
-    //         json1.push(item);
-    //     }
-    // }
-    jsonfile.writeFile(file1, map1, {spaces: 2}, function(err) {
-      console.error(err);
-    });
-    callback(null);
-  },
-  function(callback){
-    var input2 = fs.createReadStream('../PythonRouter/ImageSetTwo');
-    readLines(input2, map2, func);
-    callback(null);
-  },
-  function(callback){
-    // readLines(input1, map1, func);
-    var file2 = './ImagesSetTwo/data2.json'
-    // var json1 = [], item;
-    // for (var type in map1) {
-    //     if (map1.hasOwnProperty(type)) {
-    //         item = {};
-    //         item.type = type;
-    //         item.name = map1[type];
-    //         json1.push(item);
-    //     }
-    // }
-    jsonfile.writeFile(file2, map2, {spaces: 2}, function(err) {
-      console.error(err);
-    });
-    callback(null);
-  }
-]);
+function mainFunc(){
+  async.series([
+    function(callback){
+      var input1 = fs.createReadStream('../PythonRouter/ImageSetOne');
+      readLines(input1, map1, func);
+      callback(null);
+    },
+    function(callback){
+      console.log("MEEEEEEEEEE");
+      // readLines(input1, map1, func);
+      var file1 = './data1.json'
+      // var json1 = [], item;
+      // for (var type in map1) {
+      //     if (map1.hasOwnProperty(type)) {
+      //         item = {};
+      //         item.type = type;
+      //         item.name = map1[type];
+      //         json1.push(item);
+      //     }
+      // }
+      jsonfile.writeFile(file1, map1, {spaces: 2}, function(err) {
+        console.error(err);
+      });
+      callback(null);
+    },
+    function(callback){
+      var input2 = fs.createReadStream('../PythonRouter/ImageSetTwo');
+      readLines(input2, map2, func);
+      callback(null);
+    },
+    function(callback){
+      // readLines(input1, map1, func);
+      var file2 = './data2.json'
+      // var json1 = [], item;
+      // for (var type in map1) {
+      //     if (map1.hasOwnProperty(type)) {
+      //         item = {};
+      //         item.type = type;
+      //         item.name = map1[type];
+      //         json1.push(item);
+      //     }
+      // }
+      jsonfile.writeFile(file2, map2, {spaces: 2}, function(err) {
+        console.error(err);
+      });
+      callback(null);
+      return [map1,map2];
+    }
+  ]);
+}
 
 // map1.forEach(function(value, key) {
 //     console.log(key + " : " + value);
